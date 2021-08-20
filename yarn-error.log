@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/tanakadaisuke/.nodebrew/node/v16.5.0/bin/node /usr/local/Cellar/yarn/1.22.1/libexec/bin/yarn.js start
+  /Users/tanakadaisuke/.nodebrew/node/v16.5.0/bin/node /usr/local/Cellar/yarn/1.22.1/libexec/bin/yarn.js add -D @babel/core @babel/preset
 
 PATH: 
   /Users/tanakadaisuke/.nodebrew/current/bin:/Users/tanakadaisuke/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/tanakadaisuke/.nodebrew/current/bin
@@ -14,12 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/tanakadaisuke/Desktop/repo/webpack/package.json: Unexpected string in JSON at position 165
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:310:30)
-      at /usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@babel%2fpreset: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:66982:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:140743:22)
+      at Request.emit (node:events:394:28)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:141715:10)
+      at Request.emit (node:events:394:28)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:141637:12)
+      at Object.onceWrapper (node:events:513:28)
+      at IncomingMessage.emit (node:events:406:35)
+      at endReadableNT (node:internal/streams/readable:1331:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
@@ -28,7 +33,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
       "build": "webpack",
       "start": "webpack serve"
     },

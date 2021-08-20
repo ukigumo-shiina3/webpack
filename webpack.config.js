@@ -12,4 +12,20 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "dist"),
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        // 正規表現。拡張子「.js」で終わるファイルをテストする
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/react"],
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
